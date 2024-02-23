@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var LlabelNumber: UILabel!
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
-    
+
+    //1
     
     override func viewDidLoad() {
         super.viewDidLoad()
