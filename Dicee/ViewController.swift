@@ -24,9 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-      
-        
+        LlabelNumber.text = "Hi, GAMBLER!"
     }
     
     
@@ -44,8 +42,12 @@ class ViewController: UIViewController {
         leftDiceNumber = Int.random(in: 0...5)
         diceImageView1.image = diceArray[leftDiceNumber]
         
-        rightDiceNumber = Int.random(in: 0...5)
+        rightDiceNumber = Int.random(in: 0..<6) // includes 0,1,2,3,4,5 but not 6 (the same as 0...5)
         diceImageView2.image = diceArray[rightDiceNumber]
+        
+//        If don`t needed the number to use in other places, could use this line of code
+//        diceImageView2.image = diceArray.randomElement()
+        
         
         if leftDiceNumber==rightDiceNumber{
             LlabelNumber.text = "Congrats!!! You get a pair of \(rightDiceNumber+1)"
