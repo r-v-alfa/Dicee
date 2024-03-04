@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,58 +17,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pgu-u4-YSl">
-                                <rect key="frame" x="0.0" y="0.0" width="515" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="GreenBackground" id="pgu-u4-YSl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1001"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="1f6-gj-zHR">
-                                <rect key="frame" x="235" y="376" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="ReU-Nf-JYO">
-                                <rect key="frame" x="58" y="376" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHl-1h-kPp">
-                                <rect key="frame" x="134" y="691" width="122" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-NG-mhP">
+                                <rect key="frame" x="0.0" y="58.999999999999972" width="393" height="478.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-ge-mdg">
+                                        <rect key="frame" x="73" y="10" width="247" height="458.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="7VE-cP-aMv">
+                                                <rect key="frame" x="25.666666666666671" y="0.0" width="196" height="192.33333333333334"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceeLogo" id="3aX-k8-xMc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-5F-63a">
+                                                        <rect key="frame" x="0.0" y="175" width="196" height="17.333333333333343"/>
+                                                        <string key="text">Hi there, Gambler!
+</string>
+                                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="6SH-wY-MVg" userLabel="diceeView">
+                                                <rect key="frame" x="0.0" y="254.33333333333331" width="247" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="1f6-gj-zHR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="ReU-Nf-JYO">
+                                                        <rect key="frame" x="147" y="0.0" width="100" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-kC-xqr" userLabel="buttonsView">
+                                                <rect key="frame" x="37" y="416.33333333333331" width="173.33333333333334" height="42"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHl-1h-kPp">
+                                                        <rect key="frame" x="0.0" y="7.9999999999999982" width="73.666666666666671" height="26.333333333333329"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                                            <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="10"/>
+                                                            <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97539717314259111" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="restartDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wc1-zM-hVt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-62-ldK">
+                                                        <rect key="frame" x="99.666666666666657" y="0.0" width="73.666666666666657" height="42"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Roll">
+                                                            <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                                            <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97705593488074294" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonFlipp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWo-Ij-n8N"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SDg-ge-mdg" secondAttribute="bottom" constant="10" id="RXv-fX-ozB"/>
+                                    <constraint firstItem="SDg-ge-mdg" firstAttribute="centerX" secondItem="4Mm-NG-mhP" secondAttribute="centerX" id="dpb-kf-Vou"/>
+                                    <constraint firstItem="SDg-ge-mdg" firstAttribute="centerY" secondItem="4Mm-NG-mhP" secondAttribute="centerY" id="efu-LL-rli"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB6-ms-aVx">
+                                <rect key="frame" x="650" y="245" width="73.666666666666629" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="4SW-Uk-KZo"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reset">
                                     <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="10"/>
-                                    <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97539717314259111" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97539717309999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="restartDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wc1-zM-hVt"/>
+                                    <action selector="restartDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYm-aa-fkr"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DiceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-k8-xMc">
-                                <rect key="frame" x="98" y="93" width="196" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-5F-63a">
-                                <rect key="frame" x="58" y="214" width="278" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Hi there, Gambler!
-</string>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-62-ldK">
-                                <rect key="frame" x="89" y="555" width="214" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-Vk-5nh">
+                                <rect key="frame" x="650" y="300" width="73.666666666666629" height="42"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Roll">
                                     <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
-                                    <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97705593488074294" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.60653644799999995" green="0.11195487530000001" blue="0.1201049015" alpha="0.97705593489999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonFlipp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWo-Ij-n8N"/>
+                                    <action selector="buttonFlipp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4p-HX-cer"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Mm-NG-mhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Nz-p8-9fV"/>
+                            <constraint firstItem="hB6-ms-aVx" firstAttribute="leading" secondItem="reJ-Vk-5nh" secondAttribute="leading" id="AJ9-ze-7qM"/>
+                            <constraint firstItem="hB6-ms-aVx" firstAttribute="trailing" secondItem="reJ-Vk-5nh" secondAttribute="trailing" id="KCU-ZZ-l8h"/>
+                            <constraint firstItem="reJ-Vk-5nh" firstAttribute="top" secondItem="hB6-ms-aVx" secondAttribute="bottom" constant="16" id="SJl-vu-7rd"/>
+                            <constraint firstItem="4Mm-NG-mhP" firstAttribute="leading" secondItem="pgu-u4-YSl" secondAttribute="leading" id="YpN-5o-C6y"/>
+                            <constraint firstItem="hB6-ms-aVx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="650" id="aYa-YT-9nY"/>
+                            <constraint firstItem="hB6-ms-aVx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="245" id="baC-pq-G10"/>
+                            <constraint firstItem="4Mm-NG-mhP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fI6-aa-dpA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="LlabelNumber" destination="XoV-5F-63a" id="wk8-vM-PlC"/>
@@ -77,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2.1126760563380285" y="-45.038167938931295"/>
         </scene>
     </scenes>
     <resources>
